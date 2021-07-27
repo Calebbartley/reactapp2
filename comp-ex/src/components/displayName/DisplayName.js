@@ -1,21 +1,22 @@
-import React from 'react';
-import './DisplayName.css';
+import React, { Component } from 'react';
 
-function displayName(props) {
-   return(
-        <div className="DisplayName">
-            <h1 className="firstName">{props.displayName.firstName}</h1>
-            <h4 className="lastName">{props.displayName.lastName}</h4>
-        </div>
-   );
+class DisplayName extends Component {
+    constructor(props){
+        super(props);
+        this.state={
+            firstName: "Reggie",
+            lastName: "White"
+        }
+    }
+    render(){
+        return(
+            <div>
+                <h1>{this.state.firstName} {this.state.lastName}</h1>
+
+            </div>
+        )
+    }
+
 }
 
-
-
-
-
-
-
-
-
-export default displayName;
+export default DisplayName;
